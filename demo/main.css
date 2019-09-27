@@ -1,0 +1,110 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sides {
+  position: relative;
+  animation: 0.7s customBounce ease 0.4s both;
+
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+}
+
+@keyframes customBounce {
+  0% {
+    grid-gap: 100vw;
+  }
+  12% {
+    grid-gap: 90vw;
+  }
+  24% {
+    grid-gap: 57vw;
+  }
+  36% {
+    grid-gap: 3vw;
+  }
+  54% {
+    grid-gap: 25vw;
+  }
+  74% {
+    grid-gap: 2.5vw;
+  }
+  82% {
+    grid-gap: 6.25vw;
+  }
+  92% {
+    grid-gap: .7vw;
+  }
+  96% {
+    grid-gap: 1.5vw;
+  }
+  100% {
+    grid-gap: 0;
+  }
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 6vw;
+}
+
+.robot {
+  background-color: #ff652f;
+  color: #ffffff;
+}
+
+.alien {
+  background-color: #14a76e;
+  color: #000000;
+  flex-direction: column-reverse;
+}
+
+.name {
+  margin: 0.3em;
+}
+
+.emoji {
+  font-size: 3em;
+  margin: 0.1em;
+}
+
+.versus {
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  background: #ffffff;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4vw;
+  color: #123456;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #14a76e #ff652f #ff652f #14a76e;
+  transform: rotate(-45deg);
+}
+
+.versus span {
+  transform: rotate(35deg);
+}
